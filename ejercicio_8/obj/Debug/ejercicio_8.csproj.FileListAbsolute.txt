@@ -1,0 +1,6 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_8\bin\Debug\ejercicio_8.exe.config
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_8\bin\Debug\ejercicio_8.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_8\bin\Debug\ejercicio_8.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_8\obj\Debug\ejercicio_8.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_8\obj\Debug\ejercicio_8.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_8\obj\Debug\ejercicio_8.pdb
