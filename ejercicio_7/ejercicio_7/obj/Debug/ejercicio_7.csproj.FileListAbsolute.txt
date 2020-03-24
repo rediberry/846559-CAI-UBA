@@ -1,6 +1,0 @@
-C:\Users\ERIC BERRY\Documents\GitHub\CAI_846559_guiadeejercicios_primeros10\ejercicio_7\ejercicio_7\bin\Debug\ejercicio_7.exe.config
-C:\Users\ERIC BERRY\Documents\GitHub\CAI_846559_guiadeejercicios_primeros10\ejercicio_7\ejercicio_7\bin\Debug\ejercicio_7.exe
-C:\Users\ERIC BERRY\Documents\GitHub\CAI_846559_guiadeejercicios_primeros10\ejercicio_7\ejercicio_7\bin\Debug\ejercicio_7.pdb
-C:\Users\ERIC BERRY\Documents\GitHub\CAI_846559_guiadeejercicios_primeros10\ejercicio_7\ejercicio_7\obj\Debug\ejercicio_7.csprojAssemblyReference.cache
-C:\Users\ERIC BERRY\Documents\GitHub\CAI_846559_guiadeejercicios_primeros10\ejercicio_7\ejercicio_7\obj\Debug\ejercicio_7.exe
-C:\Users\ERIC BERRY\Documents\GitHub\CAI_846559_guiadeejercicios_primeros10\ejercicio_7\ejercicio_7\obj\Debug\ejercicio_7.pdb
