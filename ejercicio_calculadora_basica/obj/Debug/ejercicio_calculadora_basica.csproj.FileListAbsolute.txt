@@ -1,6 +1,0 @@
-C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_calculadora_basica\bin\Debug\ejercicio_calculadora_basica.exe.config
-C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_calculadora_basica\bin\Debug\ejercicio_calculadora_basica.exe
-C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_calculadora_basica\bin\Debug\ejercicio_calculadora_basica.pdb
-C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_calculadora_basica\obj\Debug\ejercicio_calculadora_basica.csprojAssemblyReference.cache
-C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_calculadora_basica\obj\Debug\ejercicio_calculadora_basica.exe
-C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_calculadora_basica\obj\Debug\ejercicio_calculadora_basica.pdb
