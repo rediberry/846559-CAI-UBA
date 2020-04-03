@@ -1,0 +1,7 @@
+C:\Users\146109\source\repos\Jugadores_Futbol\Jugadores_Futbol\bin\Debug\Jugadores_Futbol.exe.config
+C:\Users\146109\source\repos\Jugadores_Futbol\Jugadores_Futbol\bin\Debug\Jugadores_Futbol.exe
+C:\Users\146109\source\repos\Jugadores_Futbol\Jugadores_Futbol\bin\Debug\Jugadores_Futbol.pdb
+C:\Users\146109\source\repos\Jugadores_Futbol\Jugadores_Futbol\obj\Debug\Jugadores_Futbol.csprojAssemblyReference.cache
+C:\Users\146109\source\repos\Jugadores_Futbol\Jugadores_Futbol\obj\Debug\Jugadores_Futbol.csproj.CoreCompileInputs.cache
+C:\Users\146109\source\repos\Jugadores_Futbol\Jugadores_Futbol\obj\Debug\Jugadores_Futbol.exe
+C:\Users\146109\source\repos\Jugadores_Futbol\Jugadores_Futbol\obj\Debug\Jugadores_Futbol.pdb
