@@ -10,15 +10,14 @@ namespace ejercicio_17
     {
         protected string _nombre;
         protected string _apellido;
-        protected double _sueldo;
-
+        
         public string Nombre { get => _nombre; set => _nombre = value; }
         public string Apellido { get => _apellido; set => _apellido = value; }
-        public double Sueldo { get => _sueldo; set => _sueldo = value; }
+       
 
-        public virtual string GetNombreCompletoySueldo()
+        public virtual string GetNombreCompleto()
         {
-            return string.Format("{0}, {1}, ${2}", this._apellido, this._nombre, this._sueldo);
+            return string.Format("{0}, {1}", this._apellido, this._nombre);
         }
     }
 }

@@ -10,39 +10,75 @@ namespace ejercicio_17
     {
         private List<Empleado> _empleados;
         private string _nombre;
-        
+
+        public bool TieneEmpleados { get => _empleados.Count > 0; }
+
         public List<Empleado> Empleados { get => _empleados; }
-        
+
         public string Nombre { get => _nombre; set => _nombre = value; }
-       
-        public void AgregarEmpleado(Empleado empleado)
-        {
-            this.Empleados.Add(empleado);
-        }
-        
+
         public void AgregarEmpleado(string nombre, string apellido, double sueldo)
         {
             Empleado al = new Empleado(nombre, apellido, sueldo);
 
-            // podemos aprovechar las validaciones del otro método
-            this.AgregarEmpleado(al);
+            this.Empleados.Add(al);
         }
-        
+        public void EliminarEmpleado(string apellido)
+        {
+            foreach (Empleado e in this._empleados)
+            {
+                if (apellido == e.Apellido)
+                {
+                    this.Empleados.Remove(e);
+                    break;
+                }
+            }
+        }
+
         public Nomina(string nombre)
         {
-            this._nombre = nombre;
-            this._empleados = new List<Empleado>();
-            
+           this._nombre = nombre;
+           this._empleados = new List<Empleado>();
+
         }
 
         public void GetEmpleados()
         {
-            foreach (var element in this.Empleados)
+           foreach (Empleado e in this.Empleados)
+           {
+              Console.WriteLine(e);
+           }
+        }
+        public void ObtenerEmpleadoCaro()
+        {       
+            double maxSueldo = double.MinValue;
+            foreach (Empleado e in this.Empleados)
             {
-                Console.WriteLine(element);
+                if (e.Sueldo > maxSueldo)
+                {
+                    maxSueldo = e.Sueldo;
+                }
+            }
+            foreach (Empleado e in this._empleados)
+            {
+                if (maxSueldo == e.Sueldo)
+                {
+                    Console.WriteLine(e.GetNombreCompleto2());
+                    break;
+                }
             }
         }
-        
+
     }
 }
+        
+        
+
+
+
+
+
+
+    
+
 

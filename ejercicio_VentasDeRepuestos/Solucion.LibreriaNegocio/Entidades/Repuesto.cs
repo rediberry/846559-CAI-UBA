@@ -22,7 +22,7 @@ namespace LibreriaNegocio
 
         public override string ToString()
         {
-            return "[" + Codigo + "]" + Nombre;
+            return "[" + Codigo + "] " + Nombre;
         }
     }
 }

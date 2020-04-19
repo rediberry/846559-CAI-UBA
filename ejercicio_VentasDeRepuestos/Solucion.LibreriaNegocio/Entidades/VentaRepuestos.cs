@@ -24,9 +24,16 @@ namespace LibreriaNegocio
         {
             throw new NotImplementedException();
         }
-        public void ModificarPrecio(int a, double b)
+        public void ModificarPrecio(int cod, double precio)
         {
-            throw new NotImplementedException();
+            foreach (Repuesto r in this._listaProductos)
+            {
+                if(cod == r.Codigo)
+                {
+                    r.Precio = precio;
+                    break;
+                }
+            }
         }
         public void AgregarStock(int a, int b)
         {

@@ -1,0 +1,5 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_17\Solucion.LibreriaConsola\bin\Debug\Solucion.LibreriaConsola.dll.config
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_17\Solucion.LibreriaConsola\bin\Debug\Solucion.LibreriaConsola.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_17\Solucion.LibreriaConsola\bin\Debug\Solucion.LibreriaConsola.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_17\Solucion.LibreriaConsola\obj\Debug\Solucion.LibreriaConsola.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_17\Solucion.LibreriaConsola\obj\Debug\Solucion.LibreriaConsola.pdb
