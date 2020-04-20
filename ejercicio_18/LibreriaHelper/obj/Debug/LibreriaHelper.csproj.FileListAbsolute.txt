@@ -1,0 +1,4 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\LibreriaHelper\bin\Debug\LibreriaHelper.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\LibreriaHelper\bin\Debug\LibreriaHelper.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\LibreriaHelper\obj\Debug\LibreriaHelper.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\LibreriaHelper\obj\Debug\LibreriaHelper.pdb

@@ -1,0 +1,11 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\obj\Debug\Program.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\bin\Debug\ejercicio_18.exe.config
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\bin\Debug\ejercicio_18.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\bin\Debug\ejercicio_18.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\bin\Debug\LibreriaHelper.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\bin\Debug\LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\bin\Debug\LibreriaHelper.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\bin\Debug\LibreriaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\obj\Debug\Program.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\obj\Debug\ejercicio_18.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\obj\Debug\ejercicio_18.pdb

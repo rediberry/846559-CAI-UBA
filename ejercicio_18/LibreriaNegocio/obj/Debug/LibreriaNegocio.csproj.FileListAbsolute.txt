@@ -1,0 +1,5 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\LibreriaNegocio\bin\Debug\LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\LibreriaNegocio\bin\Debug\LibreriaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\LibreriaNegocio\obj\Debug\LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\LibreriaNegocio\obj\Debug\LibreriaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_18\LibreriaNegocio\obj\Debug\LibreriaNegocio.csprojAssemblyReference.cache
