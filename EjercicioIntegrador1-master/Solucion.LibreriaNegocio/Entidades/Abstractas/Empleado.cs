@@ -12,9 +12,7 @@ namespace Solucion.LibreriaNegocio
         private int _legajo;
         private Salario _ultimoSalario;
         private DateTime _fechaIngreso;
-        private int _puntaje;
 
-        public int Puntaje { get => _puntaje; set => _puntaje = value; }
         public int Antiguedad { get => (DateTime.Now - _fechaIngreso).Days / 365; }
         public int Legajo { get => _legajo; set => _legajo = value; }
         public Salario UltimoSalario { get => _ultimoSalario; set => _ultimoSalario = value; }
@@ -27,17 +25,22 @@ namespace Solucion.LibreriaNegocio
 
         public override string GetCredencial()
         {
-            string ficha = string.Format("Empleado {0} - {1} - Puntaje {2}", this.Legajo, GetNombreCompleto(), this.Puntaje);
-            
+            // PUNTO C - para q muestre el salario
+            string ficha = string.Format("Empleado {0} - {1} salario $ {2}", this.Legajo, GetNombreCompleto(), this._ultimoSalario.GetSalarioNeto().ToString());
+
             return ficha;
         }
 
-        public Empleado(int cod, string nombre, string apellido, DateTime fechaIngreso)
+        public Empleado() { }
+        // PUNTO C
+        public Empleado(int cod, string nombre,
+            string apellido, DateTime fechaIngreso, double bruto)
         {
             this.Legajo = cod;
             this.Nombre = nombre;
             this.Apellido = apellido;
             this._fechaIngreso = fechaIngreso;
+            this._ultimoSalario = new Salario(bruto); // PUNTO C
         }
 
 

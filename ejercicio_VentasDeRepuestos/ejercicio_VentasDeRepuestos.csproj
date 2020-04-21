@@ -48,5 +48,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Solucion.LibreriaNegocio\Solucion.LibreriaNegocio.csproj">
+      <Project>{ed09dbb9-5c2d-4b5b-b4ee-bf19c7312098}</Project>
+      <Name>Solucion.LibreriaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

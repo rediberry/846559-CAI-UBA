@@ -10,7 +10,7 @@ namespace Solucion.LibreriaConsola
     {
         public static string PedirString(string msg)
         {
-            Console.WriteLine("Ingrese " +msg);
+            Console.WriteLine("Ingrese " + msg);
             string n = Console.ReadLine();
 
             //validar algo
@@ -24,28 +24,13 @@ namespace Solucion.LibreriaConsola
             // se puede validar algo o usar tryparse  o dejar que lo haga el framework
             int c = int.Parse(Console.ReadLine());
 
-            
-            return c;
-        }
-        public static double PedirDouble(string msg)
-        {
-            bool EsDouble;
-            double c;
-            do
-            {
-                Console.WriteLine("Ingrese " + msg);
 
-                // se puede validar algo o usar tryparse  o dejar que lo haga el framework                
-                string n = Console.ReadLine();
-                EsDouble = Double.TryParse(n, out c);
-            }
-            while (!EsDouble);
-            return c;            
+            return c;
         }
 
         public static DateTime PedirFecha(string msg)
         {
-            Console.WriteLine("Ingrese fecha " + msg +" solo en este formato YYYY-MM-DD");
+            Console.WriteLine("Ingrese fecha " + msg + " solo en este formato YYYY-MM-DD");
 
             // se puede validar fechas inexistentes o dejar que lo haga el framework
             DateTime f = Convert.ToDateTime(Console.ReadLine());
@@ -77,6 +62,17 @@ namespace Solucion.LibreriaConsola
 
                 return false;
             }
+        }
+
+        public static double PedirDouble(string msg)
+        {
+            Console.WriteLine("Ingrese " + msg);
+
+            // se puede validar algo o usar tryparse  o dejar que lo haga el framework
+            double c = double.Parse(Console.ReadLine());
+
+
+            return c;
         }
     }
 }

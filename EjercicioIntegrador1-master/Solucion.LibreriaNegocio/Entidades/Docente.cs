@@ -8,11 +8,8 @@ namespace Solucion.LibreriaNegocio
 {
     public class Docente : Empleado
     {
-        
-
-        
-
-        public Docente(int cod, string nombre, string apellido, DateTime fechaIngreso, int puntaje) : base(cod,nombre,apellido,fechaIngreso)
+        // PUNTO C
+        public Docente(int cod, string nombre, string apellido, DateTime fechaIngreso, double bruto) : base(cod, nombre, apellido, fechaIngreso, bruto)
         {
         }
 
@@ -21,9 +18,5 @@ namespace Solucion.LibreriaNegocio
             return "Docente " + this.Apellido;
         }
 
-        /*public int GetPuntaje()
-        {
-            Console.WriteLine("Su puntaje es {0}", Puntaje);
-        }*/
     }
 }

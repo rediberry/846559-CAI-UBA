@@ -1,0 +1,10 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\bin\Debug\ejercicio_VentasDeRepuestos.exe.config
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\bin\Debug\ejercicio_VentasDeRepuestos.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\bin\Debug\ejercicio_VentasDeRepuestos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\obj\Debug\ejercicio_VentasDeRepuestos.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\obj\Debug\ejercicio_VentasDeRepuestos.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\obj\Debug\ejercicio_VentasDeRepuestos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\bin\Debug\Solucion.LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\bin\Debug\Solucion.LibreriaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\bin\Debug\Solucion.LibreriaNegocio.dll.config
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_VentasDeRepuestos\obj\Debug\ejercicio_VentasDeRepuestos.csproj.CopyComplete

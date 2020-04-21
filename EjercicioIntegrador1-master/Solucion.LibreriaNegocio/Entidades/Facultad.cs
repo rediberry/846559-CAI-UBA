@@ -14,12 +14,17 @@ namespace Solucion.LibreriaNegocio
         private List<Alumno> _alumnos;
         private string _nombre;
         private int _cantidadSedes;
-    
 
-        public List<Empleado> Empleados { get => _empleados;  }
+
+        public List<Empleado> Empleados { get => _empleados; }
         public List<Alumno> Alumnos { get => _alumnos; }
         public string Nombre { get => _nombre; set => _nombre = value; }
         public int CantidadSedes { get => _cantidadSedes; set => _cantidadSedes = value; }
+
+        // Punto B
+        public bool TieneAlumnos { get => _alumnos.Count > 0; }
+        public bool TieneEmpleados { get => _empleados.Count > 0; }
+
 
         // public string Nombre { get; set; } NO
 
@@ -37,17 +42,17 @@ namespace Solucion.LibreriaNegocio
         {
             return 1;
         }
-        public int TraerDos() =>  2;
+        public int TraerDos() => 2;
 
         public void AgregarAlumno(Alumno alumno)
         {
-            if (this.Alumnos.SingleOrDefault(x => x.Codigo == alumno.Codigo) != null)
+            if (this._alumnos.SingleOrDefault(x => x.Codigo == alumno.Codigo) != null)
                 throw new Exception("El alumno ya existe");
 
-            if(alumno.Edad < 18)
+            if (alumno.Edad < 18)
                 throw new Exception("El alumno es menor");
 
-            this.Alumnos.Add(alumno);
+            this._alumnos.Add(alumno);
         }
 
         public void AgregarAlumno(string nombre, string apellido, int codigo, DateTime fechaNac)
@@ -58,7 +63,8 @@ namespace Solucion.LibreriaNegocio
             this.AgregarAlumno(al);
         }
 
-        public void AgregarEmpleado(string nombre, string apellido, int codigo, DateTime ingreso, string tipo, string apodo, int puntaje)
+        // PUNTO C
+        public void AgregarEmpleado(string nombre, string apellido, int codigo, DateTime ingreso, string tipo, string apodo, double bruto)
         {
             Empleado empleado;
 
@@ -66,58 +72,57 @@ namespace Solucion.LibreriaNegocio
             switch (tipo.ToUpper())
             {
                 case "A":
-                    empleado = new Directivo(codigo, nombre, apellido, ingreso, puntaje);
+                    empleado = new Directivo(codigo, nombre, apellido, ingreso, bruto); // PUNTO C
                     break;
                 case "D":
-                    empleado = new Docente(codigo, nombre, apellido, ingreso, puntaje);
+                    empleado = new Docente(codigo, nombre, apellido, ingreso, bruto); // PUNTO C
                     break;
                 case "B":
-                    empleado = new Bedel(codigo, nombre, apellido, ingreso, apodo, puntaje);
+                    empleado = new Bedel(codigo, nombre, apellido, ingreso, bruto, apodo); // PUNTO C
                     break;
                 default:
                     throw new Exception("Tipo inválido.");
             }
 
             // podemos hacer alguna validacion general ej. codigo
-            if (this.Empleados.SingleOrDefault(x => x.Legajo == empleado.Legajo) != null)
+            if (this._empleados.SingleOrDefault(x => x.Legajo == empleado.Legajo) != null)
                 throw new Exception("El legajo ya existe");
 
-            this.Empleados.Add(empleado);
+            this._empleados.Add(empleado);
         }
-        public void EliminarEmpleado(int legajo)
+
+        // punto A
+        public void EliminarAlumno(int c)
         {
-            try
+            Alumno alumno = this._alumnos.SingleOrDefault(x => x.Codigo == c);
+
+            // otra forma de buscar es iterar la lista y comparar el código, hacer las validaciones y borrar directamente
+
+            if (alumno != null)
             {
-                foreach (Empleado a in Empleados)
-                {
-                    if (a.Legajo == legajo)
-                    {
-                        Empleados.Remove(a);
-                    }
-                    else throw new Exception("El legajo no existe");
-                }
+                this._alumnos.Remove(alumno);
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine(ex.Message);
+                throw new Exception("El alumno no está registrado en esta facultad.");
             }
         }
-        public void EliminarAlumno(int codigo)
+
+        // punto A
+        public void EliminarEmpleado(int c)
         {
-            try
+            Empleado empleado = this._empleados.SingleOrDefault(x => x.Legajo == c);
+
+            if (empleado != null)
             {
-                foreach (Alumno a in Alumnos)
-                {
-                    if (a.Codigo == codigo)
-                    {
-                        Alumnos.Remove(a);
-                    }
-                    else throw new Exception("El codigo no existe");
-                }
+                if (empleado.Antiguedad > 5)
+                    throw new Exception("El empleado es demasiado costoso como para despedirlo");
+                else
+                    this._empleados.Remove(empleado);
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine(ex.Message);
+                throw new Exception("El empleado ya no trabaja en esta facultad.");
             }
         }
     }

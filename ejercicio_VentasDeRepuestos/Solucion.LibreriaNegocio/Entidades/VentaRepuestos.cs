@@ -4,48 +4,108 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibreriaNegocio
+namespace ejercicio_VentasDeRepuestos
 {
-    class VentaRepuestos
+    public class VentaRepuestos
     {
         private string _nombrecomercio;
         private string _direccion;        
         private List<Repuesto> _listaProductos;
-
-        public string NombreComercio { get => _nombrecomercio; set => _nombrecomercio = value; }
-        public string Direccion { get => _direccion; set => _direccion = value; }
-        public List<Repuesto> ListaProductos { get => _listaProductos; }
-
-        public void AgregarRepuesto(Repuesto r1)
+        public VentaRepuestos()
         {
-            throw new NotImplementedException();
+            this._listaProductos = new List<Repuesto>();
         }
-        public void QuitarRepuesto(int a)
+
+        public List<Categoria> TraerCategorias()
         {
-            throw new NotImplementedException();
+            List<Categoria> listaTemporal = new List<Categoria>();
+
+            foreach (Repuesto r in _listaProductos)
+            {
+                Categoria existente = null;
+                foreach (Categoria c in listaTemporal)
+                {
+                    if (c.Codigo == r.Categoria.Codigo)
+                    {
+                        existente = c;
+                    }
+                }
+
+                if (existente == null)
+                    listaTemporal.Add(r.Categoria);
+
+            }
+
+            return listaTemporal;
+        }
+        public void AgregarRepuesto(Repuesto r, Categoria c)
+        {
+            r.Categoria = c;
+            foreach (Repuesto rep in _listaProductos)
+            {
+                if (!rep.Equals(r))
+                {
+                    //this._listaProductos.Add(r);
+                    this._listaProductos.Remove(r);
+                    break;
+                }
+
+            }
+
+
+        }
+
+        private Categoria ExisteCategoria(int codCategoria)
+        {
+            Categoria resultado = null;
+            foreach (Repuesto r in _listaProductos)
+            {
+                if (r.Categoria.Codigo == codCategoria)
+                    resultado = r.Categoria;
+            }
+
+            return resultado;
+        }
+
+        public void AgregarRepuesto(Repuesto r, int codCat, string nombreCat)
+        {
+
+            Categoria categoriaExistente = ExisteCategoria(codCat);
+
+            if (categoriaExistente == null)
+                r.Categoria = new Categoria(codCat, nombreCat);
+            else
+                r.Categoria = categoriaExistente;
+
+            this._listaProductos.Add(r);
+        }
+        public void QuitarRepuesto(int cod)
+        {
+            // ToDo
         }
         public void ModificarPrecio(int cod, double precio)
         {
             foreach (Repuesto r in this._listaProductos)
             {
-                if(cod == r.Codigo)
+                if (cod == r.Codigo)
                 {
                     r.Precio = precio;
-                    break;
                 }
             }
         }
-        public void AgregarStock(int a, int b)
+        public void AgregarStock(int codigo, int cantidad)
         {
+            // ToDo
+        }
+        public void QuitarStock(int codigo, int cantidad)
+        {
+            // ToDo
+        }
+        public List<Repuesto> TraerPorCategoria(int cod)
+        {
+            // ToDo
             throw new NotImplementedException();
         }
-        public void QuitarStock(int a, int b)
-        {
-            throw new NotImplementedException();
-        }
-        public List<Repuesto> TraerPorCategoria(int a)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

@@ -1,0 +1,5 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_19\bin\Debug\ejercicio_19.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_19\obj\Debug\ejercicio_19.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_19\obj\Debug\ejercicio_19.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_19\bin\Debug\ejercicio_19.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_19\obj\Debug\ejercicio_19.exe

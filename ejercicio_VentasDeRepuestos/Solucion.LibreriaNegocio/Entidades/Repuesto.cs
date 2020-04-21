@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibreriaNegocio
+namespace ejercicio_VentasDeRepuestos
 {
-    class Repuesto
+    public class Repuesto
     {
         private int _codigo;
         private string _nombre;
@@ -24,5 +24,24 @@ namespace LibreriaNegocio
         {
             return "[" + Codigo + "] " + Nombre;
         }
+        public Repuesto(int codigo)
+        {
+            this._codigo = codigo;
+        }
+
+        public override bool Equals(object obj)
+        {
+            Repuesto objeto2 = (Repuesto)obj;
+
+            bool resultado = (this.Codigo == objeto2.Codigo);
+
+            return resultado;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
     }
 }

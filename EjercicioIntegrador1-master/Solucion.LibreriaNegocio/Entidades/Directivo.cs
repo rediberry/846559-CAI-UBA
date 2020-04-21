@@ -8,10 +8,8 @@ namespace Solucion.LibreriaNegocio.Entidades
 {
     public class Directivo : Empleado
 
-    {
-        
-        
-        public Directivo(int cod, string nombre, string apellido, DateTime fechaIngreso, int puntaje) : base(cod, nombre, apellido, fechaIngreso)
+    {// PUNTO C
+        public Directivo(int cod, string nombre, string apellido, DateTime fechaIngreso, double bruto) : base(cod, nombre, apellido, fechaIngreso, bruto)
         {
         }
 

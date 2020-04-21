@@ -19,8 +19,8 @@ namespace Solucion.Consola
             // menú que se va a mostrar luego de CADA acción
             string menu = "1) Listar Alumnos \n2) Listar Empleados \n3) Agregar Alumno " +
                 "\n4) Agregar Empleado \n5) Borrar Alumno \n6) Borrar Empleado \n7) Limpiar Consola \nX) Salir";
-         
-            
+
+
             // Creo el objeto con el que voy a trabajar en este programa
             Facultad fce = new Facultad("FCE");
 
@@ -34,11 +34,11 @@ namespace Solucion.Consola
                 try
                 {
                     //capturamos la seleccion
-                    string opcionSeleccionada = Console.ReadLine(); 
+                    string opcionSeleccionada = Console.ReadLine();
 
                     // validamos si el input es válido (en este caso podemos tmb dejar que el switch se encargue en el default.
                     // lo dejo igual por las dudas si quieren usar el default del switch para otra cosa.
-                    if (ConsolaHelper.EsOpcionValida(opcionSeleccionada,"1234567X"))
+                    if (ConsolaHelper.EsOpcionValida(opcionSeleccionada, "1234567X"))
                     {
                         if (opcionSeleccionada.ToUpper() == "X")
                         {
@@ -55,12 +55,12 @@ namespace Solucion.Consola
                             case "2":
                                 // listar
                                 Program.ListarEmpleados(fce);
-                                
+
                                 break;
                             case "3":
                                 // alta
                                 Program.AgregarAlumno(fce);
-                                
+
                                 break;
                             case "4":
                                 // alta
@@ -72,8 +72,7 @@ namespace Solucion.Consola
                                 break;
                             case "6":
                                 // borrar
-                                Program.EliminarEmpleado
-                                    (fce);
+                                Program.EliminarEmpleado(fce);
                                 break;
                             case "7":
                                 Console.Clear();
@@ -89,11 +88,12 @@ namespace Solucion.Consola
                         Console.WriteLine("Opción inválida.");
                     }
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     Console.WriteLine("Error durante la ejecución del comando. Por favor intente nuevamente. Mensaje: " + ex.Message);
                 }
                 Console.WriteLine("Ingrese una tecla para continuar.");
-                
+
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -107,38 +107,55 @@ namespace Solucion.Consola
         #region "Métodos Propios de este programa, no reutilizables ya que piden ingresos solo para interfaz consola"
         private static void EliminarEmpleado(Facultad facultad)
         {
-            Program.ListarEmpleados(facultad);            
-            int legajo = ConsolaHelper.PedirInt("el Legajo que desea eliminar");
-            facultad.EliminarEmpleado(legajo);
-            Console.WriteLine("Empleado eliminado.");
+            // Punto A
+            if (facultad.TieneEmpleados)
+            {
+
+                ListarEmpleados(facultad);
+                Console.WriteLine("Seleccione un legajo de la lista para eliminar: ");
+                try
+                {
+                    int c = ConsolaHelper.PedirInt("Legajo");
+
+                    facultad.EliminarEmpleado(c);
+
+                    Console.WriteLine("El empleado ha sido eliminado.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("No es posible eliminar el empleado solicitado. " + ex.Message);
+                }
+
+
+            }
+            else
+            {
+                Console.WriteLine("Por el momento no hay empleados para eliminar");
+            }
         }
 
         private static void AgregarEmpleado(Facultad facultad)
         {
             try
             {
-                
+
                 string n = ConsolaHelper.PedirString("Nombre");
                 string a = ConsolaHelper.PedirString("Apellido");
                 int c = ConsolaHelper.PedirInt("Legajo");
                 string t = ConsolaHelper.PedirString("tipo empleado (D docente, B bedel, A directivo)");
                 DateTime f = ConsolaHelper.PedirFecha("Ingreso laboral");
-                
 
                 string ap = string.Empty;
                 if (t.ToUpper() == "B")
                 {
                     ap = ConsolaHelper.PedirString("Apodo");
                 }
-                int s = 0;
-                if (t.ToUpper() == "D")
-                {
-                    s = ConsolaHelper.PedirInt("Puntaje");
-                }
-                
+
+                // PUNTO C
+                double s = ConsolaHelper.PedirDouble("Salario bruto");
 
                 // acá si necesitamos enviarle los param al método para que sepa que tipo de obj crear
-                facultad.AgregarEmpleado(n,a,c,f,t,ap,s);
+                facultad.AgregarEmpleado(n, a, c, f, t, ap, s);
                 Console.WriteLine("Empleado agregado.");
 
             }
@@ -155,10 +172,31 @@ namespace Solucion.Consola
 
         private static void EliminarAlumno(Facultad facultad)
         {
-            Program.ListarAlumnos(facultad);
-            int codigo = ConsolaHelper.PedirInt("el codigo que desea eliminar");
-            facultad.EliminarAlumno(codigo);
-            Console.WriteLine("Alumno eliminado.");
+            // Punto A
+            if (facultad.TieneAlumnos)
+            {
+
+                ListarAlumnos(facultad);
+                Console.WriteLine("Seleccione un código de la lista para eliminar: ");
+                try
+                {
+                    int c = ConsolaHelper.PedirInt("Código");
+
+                    facultad.EliminarAlumno(c);
+
+                    Console.WriteLine("El alumno ha sido eliminado.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("No es posible eliminar el alumno solicitado. " + ex.Message);
+                }
+
+
+            }
+            else
+            {
+                Console.WriteLine("Por el momento no hay alumnos para eliminar");
+            }
         }
 
         private static void AgregarAlumno(Facultad facultad)
@@ -171,7 +209,7 @@ namespace Solucion.Consola
                 DateTime f = ConsolaHelper.PedirFecha("nacimiento");
 
                 // opcion 1 generamos el objeto acá
-                Alumno al = new Alumno(c,n,a,f);
+                Alumno al = new Alumno(c, n, a, f);
                 facultad.AgregarAlumno(al);
                 Console.WriteLine("Alumno agregado.");
                 // opción 2 mandamos valores y que lo genere el propio método
@@ -191,32 +229,37 @@ namespace Solucion.Consola
 
         public static void ListarAlumnos(Facultad facultad)
         {
-            Console.WriteLine("Listado de Alumnos:");
-            foreach(Alumno a in facultad.Alumnos)
+            // Punto B
+            if (facultad.TieneAlumnos)
             {
-                MostrarCredencial(a);
+                foreach (Alumno a in facultad.Alumnos)
+                {
+                    MostrarCredencial(a);
+                }
             }
-            if ( facultad.Alumnos.Count == 0)
+            else
             {
-                Console.WriteLine("La lista de alumnos se encuentra vacía");
+                Console.WriteLine("Por el momento no hay alumnos para listar.");
             }
-
         }
 
         public static void ListarEmpleados(Facultad facultad)
         {
-            Console.WriteLine("Listado de Empleados:");
-            foreach (Empleado a in facultad.Empleados)
+            // Punto B
+            if (facultad.TieneEmpleados)
             {
-                MostrarCredencial(a);
+                foreach (Empleado a in facultad.Empleados)
+                {
+                    MostrarCredencial(a);
+                }
             }
-            if (facultad.Empleados.Count == 0)
+            else
             {
-                Console.WriteLine("La lista de empleados se encuentra vacía");
+                Console.WriteLine("Por el momento no hay empleados");
             }
         }
 
-        private  static void MostrarCredencial(Persona persona)
+        private static void MostrarCredencial(Persona persona)
         {
             Console.WriteLine(persona.GetCredencial());
         }

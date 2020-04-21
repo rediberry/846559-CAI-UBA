@@ -4,11 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio_VentasDeRepuestos", "ejercicio_VentasDeRepuestos.csproj", "{EDD8E614-13BE-4C8A-B64E-5E8EF1E834EC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ED09DBB9-5C2D-4B5B-B4EE-BF19C7312098} = {ED09DBB9-5C2D-4B5B-B4EE-BF19C7312098}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solucion.LibreriaNegocio", "Solucion.LibreriaNegocio\Solucion.LibreriaNegocio.csproj", "{ED09DBB9-5C2D-4B5B-B4EE-BF19C7312098}"
-	ProjectSection(ProjectDependencies) = postProject
-		{EDD8E614-13BE-4C8A-B64E-5E8EF1E834EC} = {EDD8E614-13BE-4C8A-B64E-5E8EF1E834EC}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
