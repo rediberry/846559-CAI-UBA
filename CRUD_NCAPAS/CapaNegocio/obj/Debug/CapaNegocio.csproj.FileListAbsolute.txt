@@ -1,0 +1,9 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaNegocio\obj\Debug\CapaNegocio.pdb

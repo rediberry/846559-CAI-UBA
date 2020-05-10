@@ -8,3 +8,4 @@ C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioIntegrador1-master\
 C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioIntegrador1-master\Solucion.LibreriaConsola\obj\Debug\Solucion.LibreriaConsola.csprojAssemblyReference.cache
 C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioIntegrador1-master\Solucion.LibreriaConsola\obj\Debug\Solucion.LibreriaConsola.dll
 C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioIntegrador1-master\Solucion.LibreriaConsola\obj\Debug\Solucion.LibreriaConsola.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioIntegrador1-master\Solucion.LibreriaConsola\obj\Debug\Solucion.LibreriaConsola.csproj.CoreCompileInputs.cache

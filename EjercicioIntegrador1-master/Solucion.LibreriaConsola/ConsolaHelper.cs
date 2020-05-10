@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Solucion.LibreriaConsola
+namespace ejercicio_expendedora
 {
     public static class ConsolaHelper
     {

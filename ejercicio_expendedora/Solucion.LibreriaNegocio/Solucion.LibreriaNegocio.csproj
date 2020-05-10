@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="Entidades\Lata.cs" />
     <Compile Include="Entidades\Expendedora.cs" />
-    <Compile Include="Helpers\LibreriaExceptions.cs" />
+    <Compile Include="Exceptions\LibreriaExceptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

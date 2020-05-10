@@ -1,0 +1,12 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\bin\Debug\ejercicio_expendedora.exe.config
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\bin\Debug\ejercicio_expendedora.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\bin\Debug\ejercicio_expendedora.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\bin\Debug\Solucion.LibreriaConsola.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\bin\Debug\Solucion.LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\bin\Debug\Solucion.LibreriaConsola.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\bin\Debug\Solucion.LibreriaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\obj\Debug\ejercicio_expendedora.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\obj\Debug\ejercicio_expendedora.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\obj\Debug\ejercicio_expendedora.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\obj\Debug\ejercicio_expendedora.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\obj\Debug\ejercicio_expendedora.pdb

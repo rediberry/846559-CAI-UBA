@@ -1,0 +1,6 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\CRUD_NCAPAS\CapaDatos\obj\Debug\CapaDatos.pdb
