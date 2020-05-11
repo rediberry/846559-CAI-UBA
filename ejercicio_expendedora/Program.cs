@@ -16,103 +16,115 @@ namespace ejercicio_expendedora
             bool continuarActivo = true;            
 
             // menú que se va a mostrar luego de CADA acción
-            string menu = "1) Encender maquina \n2) Listar latas disponibles \n3) Agregar latas " +
-                "\n4) Extraer lata \n5) Mostrar balance \n6) Ver stock \n7) Limpiar Consola \nX) Salir";
+            string menu = "1) Listar latas disponibles \n2) Agregar latas " +
+                "\n3) Extraer lata \n4) Mostrar balance \n5) Ver stock \n6) Limpiar Consola \nX) Salir";
 
 
             // Creo el objeto con el que voy a trabajar en este programa
             Expendedora exp1 = new Expendedora("Expendedora CAI");
             exp1.Encendida = false;
-
-            // pantalla de bienvenida
-            Console.WriteLine("Bienvenido a " + exp1.Nombre);
-
-            do
+            Console.WriteLine("Desea encender la Expendedora?");
+            string encender = ConsolaHelper.PedirString("'s'");
+            if (ConsolaHelper.EsOpcionValida(encender, "s"))
             {
-                Console.WriteLine(menu); //mostramos el menú
 
-                try
+
+                do
                 {
-                    //capturamos la seleccion
-                    string opcionSeleccionada = Console.ReadLine();
+                    // pantalla de bienvenida
+                    Console.WriteLine("Bienvenido a " + exp1.Nombre);
+                    Console.WriteLine(menu); //mostramos el menú
 
-                    // validamos si el input es válido (en este caso podemos tmb dejar que el switch se encargue en el default.
-                    // lo dejo igual por las dudas si quieren usar el default del switch para otra cosa.
-                    if (ConsolaHelper.EsOpcionValida(opcionSeleccionada, "1234567X"))
+                    try
                     {
-                        if (opcionSeleccionada.ToUpper() == "X")
+                        //capturamos la seleccion
+                        string opcionSeleccionada = Console.ReadLine();
+
+                        // validamos si el input es válido (en este caso podemos tmb dejar que el switch se encargue en el default.
+                        // lo dejo igual por las dudas si quieren usar el default del switch para otra cosa.
+                        if (ConsolaHelper.EsOpcionValida(opcionSeleccionada, "123456X"))
                         {
-                            continuarActivo = false;
-                            continue;
+                            if (opcionSeleccionada.ToUpper() == "X")
+                            {
+                                continuarActivo = false;
+                                continue;
+                            }
+
+                            switch (opcionSeleccionada)
+                            {
+                                
+                                case "1":
+                                    // listar latas disponibles
+                                    Program.ListarLatas();
+
+                                    break;
+                                case "2":
+                                    // agregar latas
+                                    Program.IngresarLata(exp1);
+
+                                    break;
+                                case "3":
+                                    // extraer latas
+                                    Program.ExtraerLata(exp1);
+                                    break;
+                                case "4":
+                                    // mostrar balance
+                                    Program.ObtenerBalance(exp1);
+                                    break;
+                                case "5":
+                                    // ver stock
+                                    Program.MostrarStock(exp1);
+                                    break;
+                                case "6":
+                                    // limpiar pantalla
+                                    Console.Clear();
+                                    break;
+                                //etc... si tenemos más opciones...
+                                default:
+                                    Console.WriteLine("Opción inválida.");
+                                    break;
+                            }
                         }
-
-                        switch (opcionSeleccionada)
+                        else
                         {
-                            case "1":
-                                // Encender expendedora
-                                exp1.EncenderMaquina();
-                                break;
-
-                            case "2":
-                                // listar latas disponibles
-                                Program.ListarLatas();
-
-                                break;
-                            case "3":
-                                // agregar latas
-                                Program.IngresarLata(exp1);
-
-                                break;
-                            case "4":
-                                // extraer latas
-                                Program.ExtraerLata(exp1);
-                                break;
-                            case "5":
-                                // mostrar balance
-                                Program.ObtenerBalance(exp1);
-                                break;
-                            case "6":
-                                // ver stock
-                                Program.MostrarStock(exp1);
-                                break;
-                            case "7":
-                                // limpiar pantalla
-                                Console.Clear();
-                                break;
-                            //etc... si tenemos más opciones...
-                            default:
-                                Console.WriteLine("Opción inválida.");
-                                break;
+                            Console.WriteLine("Opción inválida.");
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        Console.WriteLine("Opción inválida.");
+                        Console.WriteLine("Error durante la ejecución del comando. Por favor intente nuevamente. Mensaje: " + ex.Message);
                     }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error durante la ejecución del comando. Por favor intente nuevamente. Mensaje: " + ex.Message);
-                }
-                Console.WriteLine("Ingrese una tecla para continuar.");
+                    Console.WriteLine("Ingrese una tecla para continuar.");
 
-                Console.ReadKey();
-                Console.Clear();
-            }
-            while (continuarActivo);
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                while (continuarActivo);
 
-            Console.WriteLine("Gracias por usar la app.");
+                Console.WriteLine("Gracias por usar la app.");
+                
+            }  else Console.WriteLine("Gracias por usar la app.");
+
             Console.ReadKey();
+            
+            
+
+             
         }
 
         #region 
         private static void IngresarLata(Expendedora expendedora)
         {
+            Console.WriteLine("Codigos válidos:");
+            Program.ListarLatas();
             try
             {
-                string c = ConsolaHelper.PedirString("Codigo");
-                string n = ConsolaHelper.PedirString("Nombre");
-                string s = ConsolaHelper.PedirString("Sabor");
+                               
+                 string c = ConsolaHelper.PedirString("Codigo");            
+                              
+
+                //string n = ConsolaHelper.PedirString("Nombre");
+                //string s = ConsolaHelper.PedirString("Sabor");
                 double p = ConsolaHelper.PedirDouble("Precio");
                 double v = ConsolaHelper.PedirDouble("Volumen");
 
