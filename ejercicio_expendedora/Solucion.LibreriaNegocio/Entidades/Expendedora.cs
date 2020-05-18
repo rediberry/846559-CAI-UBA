@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Solucion.LibreriaNegocio.Exceptions;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Solucion.LibreriaNegocio
@@ -28,20 +30,25 @@ namespace Solucion.LibreriaNegocio
             this._latas = latas;
             this._proveedor = proveedor;
             this._capacidad = capacidad;
-            this._dinero = dinero;            
+            this._dinero = dinero;
         }
         public Expendedora(string nombre)
         {
             this._nombre = nombre;
-            this._latas = new List<Lata>();            
+            this._latas = new List<Lata>();
         }
 
         public void AgregarLata(Lata lata)
         {
-            if (this._latas.SingleOrDefault(x => x.Codigo != lata.Codigo) != null)
-                throw new Exception("La lata no existe");
-            
-            this._latas.Add(lata);
+            if (Regex.IsMatch(lata.Codigo.ToString().ToUpper(), @"CO1|CO2|SP1|SP2|FA1|FA2"))
+            {
+                this._latas.Add(lata);
+            }
+            else if (!Regex.IsMatch(lata.Codigo.ToString().ToLower(), @"CO1|CO2|SP1|SP2|FA1|FA2")) 
+            {
+                CodigoInvalidoException ex = new CodigoInvalidoException(string.Format("{0} no es un codigo válido", lata.Codigo));
+                throw ex;
+            }
         }
         public void AgregarLata(string codigo, string nombre, string sabor, double precio, double volumen)
         {
@@ -49,13 +56,23 @@ namespace Solucion.LibreriaNegocio
             // podemos aprovechar las validaciones del otro método
             this.AgregarLata(al);
         }
-        public Lata ExtraerLata(string nombre, double precio)
+        public Lata ExtraerLata(string nombre, double precio )
         {
-            throw new NotImplementedException();
+            Lata lata = this._latas.SingleOrDefault(x => x.Codigo == nombre);            
+
+            if (lata != null)
+            {
+                _dinero = _dinero + precio;
+                return lata;                
+            }
+            else
+            {
+                throw new Exception("No hay stock de esa lata");  
+            }
         }
         public string GetBalance()
         {
-            throw new NotImplementedException();
+            return _dinero.ToString();
         }
         public int GetCapacidadRestante()
         {
@@ -63,11 +80,74 @@ namespace Solucion.LibreriaNegocio
         }
         public void EncenderMaquina()
         {
-            Encendida = true;           
+            Encendida = true;
         }
         public bool EstaVacia()
         {
-            throw new NotImplementedException();
+            if (_latas.Count > 0)
+            {
+                return true;
+            }
+            else return false;
+        }
+        public string GetMarca(string codigo)
+        {
+            string n = "";
+
+            switch (codigo.ToUpper())
+            {
+                case "CO1":
+                    n = "Coca Cola";
+                    break;
+                case "CO2":
+                    n = "Coca Cola";
+                    break;
+                case "SP1":
+                    n = "Sprite";
+                    break;
+                case "SP2":
+                    n = "Sprite";
+                    break;
+                case "FA1":
+                    n = "Fanta";
+                    break;
+                case "FA2":
+                    n = "Fanta";
+                    break;                
+            }
+            return n;                   
+        } 
+        public string GetSabor(string codigo)
+        {
+            string s = "";
+
+            switch (codigo.ToUpper())
+            {
+                case "CO1":
+                    s = "Regular";
+                    break;
+                case "CO2":
+                    s = "Zero";
+                    break;
+                case "SP1":
+                    s = "Regular";
+                    break;
+                case "SP2":
+                    s = "Zero";
+                    break;
+                case "FA1":
+                    s = "Regular";
+                    break;
+                case "FA2":
+                    s = "Zero";
+                    break;
+            }
+            return s;
+        }
+        public string ContarLatas(Expendedora expendedora)
+        {
+            int count = Latas.Count();
+            return count.ToString();
         }
     }
 }

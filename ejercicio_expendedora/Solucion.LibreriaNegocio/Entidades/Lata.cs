@@ -12,13 +12,13 @@ namespace Solucion.LibreriaNegocio
         private string _nombre;
         private string _sabor;
         private double _precio;
-        private double _volumen;
+        private double _volumen; //asumimos que siempre son ml (mililitros)
 
         public string Codigo { get => _codigo; set => _codigo = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
         public string Sabor { get => _sabor; set => _sabor = value; }
         public double Precio { get => _precio; set => _precio = value; }
-        public double volumen { get => _volumen; set => _volumen = value; }
+        public double Volumen { get => _volumen; set => _volumen = value; }
 
         public Lata(string codigo, string nombre, string sabor, double precio, double volumen)
         {
@@ -31,12 +31,16 @@ namespace Solucion.LibreriaNegocio
 
         private double GetPrecioPorLitro()
         {
-            throw new NotImplementedException();
+            double precioxlitro = Math.Round((1000 / _volumen) * _precio,2);
+            return precioxlitro;
         }
         public override string ToString()
         {
-            throw new NotImplementedException();
+            double precioxlitro = GetPrecioPorLitro();
+            string descripcion = string.Format("{0} - {1} $ {2} / $/L {3}", this.Nombre, this.Sabor, this.Precio, precioxlitro);
+
+            return descripcion;
         }
-        
+
     }
 }

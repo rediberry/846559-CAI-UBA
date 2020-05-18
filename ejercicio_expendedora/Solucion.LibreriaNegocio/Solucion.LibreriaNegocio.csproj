@@ -43,7 +43,10 @@
   <ItemGroup>
     <Compile Include="Entidades\Lata.cs" />
     <Compile Include="Entidades\Expendedora.cs" />
-    <Compile Include="Exceptions\LibreriaExceptions.cs" />
+    <Compile Include="Exceptions\CapacidadInsuficienteException.cs" />
+    <Compile Include="Exceptions\CodigoInvalidoException.cs" />
+    <Compile Include="Exceptions\DineroInsuficienteException.cs" />
+    <Compile Include="Exceptions\SinStockException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

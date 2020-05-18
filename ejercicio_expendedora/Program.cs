@@ -1,4 +1,5 @@
 ﻿using Solucion.LibreriaNegocio;
+using Solucion.LibreriaNegocio.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -105,11 +106,8 @@ namespace ejercicio_expendedora
                 
             }  else Console.WriteLine("Gracias por usar la app.");
 
-            Console.ReadKey();
-            
-            
-
-             
+            Console.ReadKey();         
+                        
         }
 
         #region 
@@ -117,45 +115,88 @@ namespace ejercicio_expendedora
         {
             Console.WriteLine("Codigos válidos:");
             Program.ListarLatas();
-            try
+            if (expendedora.Latas.Count() < 50)
             {
-                               
-                 string c = ConsolaHelper.PedirString("Codigo");            
-                              
-
-                //string n = ConsolaHelper.PedirString("Nombre");
-                //string s = ConsolaHelper.PedirString("Sabor");
-                double p = ConsolaHelper.PedirDouble("Precio");
-                double v = ConsolaHelper.PedirDouble("Volumen");
 
 
-                // opcion 1 generamos el objeto acá
-                Lata ll = new Lata(c, n, s, p, v);
-                expendedora.AgregarLata(ll);
-                Console.WriteLine("Lata agregada.");
-                // opción 2 mandamos valores y que lo genere el propio método                
-            }
-            catch (Exception ex)
+                try
+                {
+                    string c = ConsolaHelper.PedirString("Codigo");
+                    double p = ConsolaHelper.PedirDouble("Precio");
+                    double v = ConsolaHelper.PedirDouble("Volumen (ml)");
+                    string n = expendedora.GetMarca(c);
+                    string s = expendedora.GetSabor(c);
+
+                    //generamos el objeto acá
+                    Lata ll = new Lata(c, n, s, p, v);
+                    expendedora.AgregarLata(ll);
+                    Console.WriteLine("Lata agregada.");
+
+                }
+                catch (Exception ex)
+                {
+                    // podemos usar recursión para que no salga del método hasta que no lo haga bien.
+                    Console.WriteLine("Error en uno de los datos ingresados. " + ex.Message + " Intente nuevamente. \n\n");
+
+                    IngresarLata(expendedora);
+                }
+            }            
+            else if (expendedora.Latas.Count() >= 50)
             {
-                // podemos usar recursión para que no salga del método hasta que no lo haga bien.
-                Console.WriteLine("Error en uno de los datos ingresados. " + ex.Message + " Intente nuevamente. \n\n");
-
-                // podemos preguntarle si quiere hacerlo de nuevo. Depende de nuestro negocio.
-                // if(quiereIntentarNuevamente)
-                IngresarLata(expendedora);
+                CapacidadInsuficienteException ex = new CapacidadInsuficienteException(string.Format("La {0} se encuentra llena",expendedora.Nombre));
+                throw ex;
             }
+
         }
         private static void ExtraerLata(Expendedora expendedora)
         {
-            throw new NotImplementedException();
+            if (expendedora.EstaVacia())
+            { 
+                Console.WriteLine("Codigos válidos:");
+                Program.ListarLatas();
+                try
+                {
+                    string c = ConsolaHelper.PedirString("Codigo");
+                    double p = ConsolaHelper.PedirDouble("El dinero en la maquina");
+                    Lata lata = expendedora.ExtraerLata(c, p);
+                    expendedora.Latas.Remove(lata);
+                    Console.WriteLine("Aquí tiene su lata");
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("Intente nuevamente." + ex.Message);
+                }
+            }
+            else
+            {
+                Console.WriteLine("La expendedora está vacía.");
+            }
         }
         private static void ObtenerBalance(Expendedora expendedora)
         {
-            throw new NotImplementedException();
+            
+            string saldo = expendedora.GetBalance();
+            Console.WriteLine("El saldo de la expendedora es: ${0}", saldo);
+            string count = expendedora.ContarLatas(expendedora);
+            Console.WriteLine("hay {0} latas en la expendedora", count);
         }
         private static void MostrarStock(Expendedora expendedora)
         {
-            throw new NotImplementedException();
+            if (expendedora.EstaVacia())
+            {
+                string count = expendedora.ContarLatas(expendedora);
+                Console.WriteLine("hay {0} latas en la expendedora", count);
+                foreach (Lata a in expendedora.Latas)
+                {
+                    string l = a.ToString();
+                    Console.WriteLine(l);
+                }
+            }
+            else if (!expendedora.EstaVacia())
+            {
+                SinStockException ex = new SinStockException(string.Format("La {0} no tiene stock", expendedora.Nombre));
+                throw ex;
+            }
         }
         private static void ListarLatas()
         {
