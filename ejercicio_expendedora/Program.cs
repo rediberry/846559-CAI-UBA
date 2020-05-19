@@ -176,16 +176,18 @@ namespace ejercicio_expendedora
         {
             
             string saldo = expendedora.GetBalance();
-            Console.WriteLine("El saldo de la expendedora es: ${0}", saldo);
+            Console.WriteLine("El saldo de la expendedora es: ${0}.", saldo);
             string count = expendedora.ContarLatas(expendedora);
-            Console.WriteLine("hay {0} latas en la expendedora", count);
+            Console.WriteLine("Hay {0} latas en la expendedora.", count);
+            string capacidad = expendedora.GetCapacidadRestante().ToString();
+            Console.WriteLine("Se pueden ingresar hasta {0} latas adicionales.", capacidad);
         }
         private static void MostrarStock(Expendedora expendedora)
         {
             if (expendedora.EstaVacia())
             {
                 string count = expendedora.ContarLatas(expendedora);
-                Console.WriteLine("hay {0} latas en la expendedora", count);
+                Console.WriteLine("Hay {0} latas en la expendedora.", count);
                 foreach (Lata a in expendedora.Latas)
                 {
                     string l = a.ToString();
@@ -194,7 +196,7 @@ namespace ejercicio_expendedora
             }
             else if (!expendedora.EstaVacia())
             {
-                SinStockException ex = new SinStockException(string.Format("La {0} no tiene stock", expendedora.Nombre));
+                SinStockException ex = new SinStockException(string.Format("La {0} no tiene stock.", expendedora.Nombre));
                 throw ex;
             }
         }

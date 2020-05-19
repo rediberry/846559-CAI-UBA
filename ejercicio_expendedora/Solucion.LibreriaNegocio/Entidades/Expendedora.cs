@@ -56,18 +56,41 @@ namespace Solucion.LibreriaNegocio
             // podemos aprovechar las validaciones del otro método
             this.AgregarLata(al);
         }
-        public Lata ExtraerLata(string nombre, double precio )
+        public Lata ExtraerLata(string codigo, double precio )
         {
-            Lata lata = this._latas.SingleOrDefault(x => x.Codigo == nombre);            
+            if (Regex.IsMatch(codigo.ToString().ToUpper(), @"CO1|CO2|SP1|SP2|FA1|FA2"))
+            {
+                Lata lata = _latas.FirstOrDefault(x => x.Codigo.ToUpper() == codigo.ToUpper());
 
-            if (lata != null)
-            {
-                _dinero = _dinero + precio;
-                return lata;                
+                if (lata != null)
+                {
+                    if (lata.Precio == precio)
+                    {
+                        _dinero = _dinero + precio;
+                        return lata;
+                    }
+                    else if (lata.Precio <= precio)
+                    {
+                        _dinero = _dinero + lata.Precio;
+                        double vuelto = precio - lata.Precio;
+                        Console.WriteLine("Recoja su vuelto $" + vuelto);
+                        return lata;
+                    }
+                    else
+                    {
+                        DineroInsuficienteException ex = new DineroInsuficienteException(string.Format("${0} no alcanza para extraer la lata.", precio));
+                        throw ex;
+                    }
+                }
+                else
+                {
+                    throw new Exception("No hay stock de esa lata");
+                }
             }
-            else
+            else 
             {
-                throw new Exception("No hay stock de esa lata");  
+                CodigoInvalidoException ex = new CodigoInvalidoException(string.Format("{0} no es un codigo válido", codigo));
+                throw ex;
             }
         }
         public string GetBalance()
@@ -76,7 +99,8 @@ namespace Solucion.LibreriaNegocio
         }
         public int GetCapacidadRestante()
         {
-            throw new NotImplementedException();
+            int count = 50 - Latas.Count();
+            return count;
         }
         public void EncenderMaquina()
         {
