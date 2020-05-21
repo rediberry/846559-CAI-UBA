@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Solucion.LibreriaNegocio.Entidades;
 
 namespace Solucion.LibreriaNegocio
 {
@@ -15,7 +16,7 @@ namespace Solucion.LibreriaNegocio
         private int _capacidad;
         private double _dinero;
         private bool _encendida;
-        private string _nombre;
+        private string _nombre;        
 
         public List<Lata> Latas { get => _latas; }
         public string Proveedor { get => _proveedor; set => _proveedor = value; }
@@ -36,6 +37,18 @@ namespace Solucion.LibreriaNegocio
         {
             this._nombre = nombre;
             this._latas = new List<Lata>();
+            Lata a1 = new Lata("CO1", "Coca Cola", "Regular", 30, 350);
+            Lata a2 = new Lata("CO2", "Coca Cola", "Zero", 35, 350);
+            Lata a3 = new Lata("SP1", "Sprite", "Regular", 30, 350);
+            Lata a4 = new Lata("SP2", "Sprite", "Zero", 35, 350);
+            Lata a5 = new Lata("FA1", "Fanta", "Regular", 30, 350);
+            Lata a6 = new Lata("FA2", "Fanta", "Zero", 35, 350);
+            this._latas.Add(a1);
+            this._latas.Add(a2);
+            this._latas.Add(a3);
+            this._latas.Add(a4);
+            this._latas.Add(a5);
+            this._latas.Add(a6);
         }
 
         public void AgregarLata(Lata lata)
@@ -56,7 +69,7 @@ namespace Solucion.LibreriaNegocio
             // podemos aprovechar las validaciones del otro método
             this.AgregarLata(al);
         }
-        public Lata ExtraerLata(string codigo, double precio )
+        public DevolucionMaquina ExtraerLata(string codigo, double precio )
         {
             if (Regex.IsMatch(codigo.ToString().ToUpper(), @"CO1|CO2|SP1|SP2|FA1|FA2"))
             {
@@ -64,18 +77,13 @@ namespace Solucion.LibreriaNegocio
 
                 if (lata != null)
                 {
-                    if (lata.Precio == precio)
-                    {
-                        _dinero = _dinero + precio;
-                        return lata;
-                    }
-                    else if (lata.Precio <= precio)
+                    if (lata.Precio <= precio)
                     {
                         _dinero = _dinero + lata.Precio;
                         double vuelto = precio - lata.Precio;
-                        Console.WriteLine("Recoja su vuelto $" + vuelto);
-                        return lata;
-                    }
+                        DevolucionMaquina retirar = new DevolucionMaquina(lata, vuelto);
+                        return retirar;
+                    }                    
                     else
                     {
                         DineroInsuficienteException ex = new DineroInsuficienteException(string.Format("${0} no alcanza para extraer la lata.", precio));
@@ -99,8 +107,8 @@ namespace Solucion.LibreriaNegocio
         }
         public int GetCapacidadRestante()
         {
-            int count = 50 - Latas.Count();
-            return count;
+            Capacidad = 7 - Latas.Count();
+            return Capacidad;
         }
         public void EncenderMaquina()
         {

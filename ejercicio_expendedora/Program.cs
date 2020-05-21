@@ -1,4 +1,5 @@
 ﻿using Solucion.LibreriaNegocio;
+using Solucion.LibreriaNegocio.Entidades;
 using Solucion.LibreriaNegocio.Exceptions;
 using System;
 using System.Collections.Generic;
@@ -115,7 +116,7 @@ namespace ejercicio_expendedora
         {
             Console.WriteLine("Codigos válidos:");
             Program.ListarLatas();
-            if (expendedora.Latas.Count() < 50)
+            if (expendedora.Latas.Count() < 7)
             {
 
 
@@ -141,7 +142,7 @@ namespace ejercicio_expendedora
                     IngresarLata(expendedora);
                 }
             }            
-            else if (expendedora.Latas.Count() >= 50)
+            else if (expendedora.Latas.Count() >= 7)
             {
                 CapacidadInsuficienteException ex = new CapacidadInsuficienteException(string.Format("La {0} se encuentra llena",expendedora.Nombre));
                 throw ex;
@@ -158,9 +159,10 @@ namespace ejercicio_expendedora
                 {
                     string c = ConsolaHelper.PedirString("Codigo");
                     double p = ConsolaHelper.PedirDouble("El dinero en la maquina");
-                    Lata lata = expendedora.ExtraerLata(c, p);
-                    expendedora.Latas.Remove(lata);
-                    Console.WriteLine("Aquí tiene su lata");
+                    DevolucionMaquina LataVuelto = expendedora.ExtraerLata(c, p);
+                    expendedora.Latas.Remove(LataVuelto.Lata);                    
+                    Console.WriteLine("Aquí tiene su {0} - {1}. Su vuelto es ${2}.", LataVuelto.Lata.Nombre, LataVuelto.Lata.Sabor, LataVuelto.Cambio.ToString());
+                    
                 }
                 catch(Exception ex)
                 {
@@ -179,8 +181,15 @@ namespace ejercicio_expendedora
             Console.WriteLine("El saldo de la expendedora es: ${0}.", saldo);
             string count = expendedora.ContarLatas(expendedora);
             Console.WriteLine("Hay {0} latas en la expendedora.", count);
-            string capacidad = expendedora.GetCapacidadRestante().ToString();
-            Console.WriteLine("Se pueden ingresar hasta {0} latas adicionales.", capacidad);
+            int capacidad = expendedora.GetCapacidadRestante();
+            if (capacidad > 0)
+            {
+                Console.WriteLine("Se pueden ingresar hasta {0} latas adicionales.", capacidad);
+            }
+            else
+            {
+                Console.WriteLine("La expendedora se encuentra llena, no pueden agregarse latas adicionales.");
+            }
         }
         private static void MostrarStock(Expendedora expendedora)
         {

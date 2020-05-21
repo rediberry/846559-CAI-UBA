@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\DevolucionMaquina.cs" />
     <Compile Include="Entidades\Lata.cs" />
     <Compile Include="Entidades\Expendedora.cs" />
     <Compile Include="Exceptions\CapacidadInsuficienteException.cs" />
