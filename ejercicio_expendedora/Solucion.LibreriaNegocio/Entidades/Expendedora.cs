@@ -97,7 +97,7 @@ namespace Solucion.LibreriaNegocio
             }
             else 
             {
-                CodigoInvalidoException ex = new CodigoInvalidoException(string.Format("{0} no es un codigo válido", codigo));
+                CodigoInvalidoException ex = new CodigoInvalidoException(string.Format(" {0} no es un codigo válido", codigo));
                 throw ex;
             }
         }

@@ -118,8 +118,6 @@ namespace ejercicio_expendedora
             Program.ListarLatas();
             if (expendedora.Latas.Count() < 7)
             {
-
-
                 try
                 {
                     string c = ConsolaHelper.PedirString("Codigo");
