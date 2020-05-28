@@ -1,0 +1,12 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\Solucion.LibreriaNegocio\bin\Debug\Solucion.LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\Solucion.LibreriaNegocio\bin\Debug\Solucion.LibreriaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\Solucion.LibreriaNegocio\obj\Debug\Solucion.LibreriaNegocio.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\Solucion.LibreriaNegocio\obj\Debug\Solucion.LibreriaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\Solucion.LibreriaNegocio\obj\Debug\Solucion.LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\ejercicio_expendedora\Solucion.LibreriaNegocio\obj\Debug\Solucion.LibreriaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.LibreriaNegocio\bin\Debug\Solucion.LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.LibreriaNegocio\bin\Debug\Solucion.LibreriaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.LibreriaNegocio\obj\Debug\Solucion.LibreriaNegocio.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.LibreriaNegocio\obj\Debug\Solucion.LibreriaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.LibreriaNegocio\obj\Debug\Solucion.LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.LibreriaNegocio\obj\Debug\Solucion.LibreriaNegocio.pdb

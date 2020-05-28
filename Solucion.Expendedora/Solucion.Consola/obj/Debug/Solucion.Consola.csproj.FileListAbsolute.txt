@@ -1,0 +1,12 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\bin\Debug\Solucion.Consola.exe.config
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\bin\Debug\Solucion.Consola.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\bin\Debug\Solucion.Consola.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\bin\Debug\Solucion.LibreriaConsola.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\bin\Debug\Solucion.LibreriaNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\bin\Debug\Solucion.LibreriaConsola.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\bin\Debug\Solucion.LibreriaNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\obj\Debug\Solucion.Consola.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\obj\Debug\Solucion.Consola.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\obj\Debug\Solucion.Consola.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\obj\Debug\Solucion.Consola.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\Solucion.Expendedora\Solucion.Consola\obj\Debug\Solucion.Consola.pdb

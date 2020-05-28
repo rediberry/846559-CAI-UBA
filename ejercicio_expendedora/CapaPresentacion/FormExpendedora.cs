@@ -15,11 +15,31 @@ namespace CapaPresentacion
 {
     public partial class FormExpendedora : Form
     {
+        #region "Atributos y constructor"
         Expendedora exp1 = new Expendedora("Expendedora CAI");
         public FormExpendedora()
         {
             InitializeComponent();
-        }        
+        }
+        #endregion
+
+        #region "Métodos"
+        private void limpiarForm()
+        {
+            txtCodigo.Clear();
+            txtPrecio.Clear();
+            txtVolumen.Clear();
+            txtDinero.Clear();
+        }
+        private void CargarListaLatas(List<Lata> latas)
+        {
+            listLatas.DataSource = null;
+            listLatas.DataSource = latas;
+
+        }
+        #endregion
+
+        #region "Eventos"
         private void button2_Click(object sender, EventArgs e)
         {
             FormSaludoFinal f1 = new FormSaludoFinal();            
@@ -38,11 +58,13 @@ namespace CapaPresentacion
             btnVerStock.Show();
             btnVerBalance.Show();
             pictureBox1.Show();
-            
+            btnApagar.Show();
+
         }
 
         private void btnListadoLatas_Click(object sender, EventArgs e)
         {
+            btnApagar.Enabled = false;
             btnExtraerLata.Enabled = false;
             btnInsertarLata.Enabled = false;
             btnVerStock.Enabled = false;
@@ -53,6 +75,7 @@ namespace CapaPresentacion
             btnInsertarLata.Enabled = true;
             btnVerStock.Enabled = true;
             btnVerBalance.Enabled = true;
+            btnApagar.Enabled = true;
         }
 
         private void FormExpendedora_Load(object sender, EventArgs e)
@@ -78,29 +101,39 @@ namespace CapaPresentacion
             lblBalance.Hide();
             lblDinero.Hide();
             txtDinero.Hide();
+            btnVolverExtraer.Hide();
+            btnVolverInsertar.Hide();
+            btnApagar.Hide();
         }
 
         private void btnInsertarLata_Click(object sender, EventArgs e)
         {
-            btnListadoLatas.Enabled = false;
-            btnExtraerLata.Enabled = false;
-            btnInsertarLata.Enabled = false;
-            btnVerStock.Enabled = false;
-            btnVerBalance.Enabled = false;
-            lblListadoLatas.Show();
-            lblCodigo.Show();
-            lblPrecio.Show();
-            lblVolumen.Show();
-            txtCodigo.Show();
-            txtPrecio.Show();
-            txtVolumen.Show();
-            btnGuardar.Show();
+            if (exp1.Latas.Count() < 7)
+            {
+                btnListadoLatas.Enabled = false;
+                btnExtraerLata.Enabled = false;
+                btnInsertarLata.Enabled = false;
+                btnVerStock.Enabled = false;
+                btnVerBalance.Enabled = false;
+                btnApagar.Enabled = false;
+                btnVolverInsertar.Show();
+                lblListadoLatas.Show();
+                lblCodigo.Show();
+                lblPrecio.Show();
+                lblVolumen.Show();
+                txtCodigo.Show();
+                txtPrecio.Show();
+                txtVolumen.Show();
+                btnGuardar.Show();
+            }
+            else if (exp1.Latas.Count() >= 7)
+            {
+                CapacidadInsuficienteException ex = new CapacidadInsuficienteException(string.Format("La {0} se encuentra llena", exp1.Nombre));
+                MessageBox.Show(ex.Message);                
+            }
         }
         private void btnGuardar_Click(object sender, EventArgs e)
-        {          
-            
-            if (exp1.Latas.Count() < 7) 
-            {
+        {            
                 try
                 {
                     string c = txtCodigo.Text;
@@ -119,6 +152,7 @@ namespace CapaPresentacion
                     btnInsertarLata.Enabled = true;
                     btnVerStock.Enabled = true;
                     btnVerBalance.Enabled = true;
+                    btnApagar.Enabled = true;
                     lblListadoLatas.Hide();
                     lblCodigo.Hide();
                     lblPrecio.Hide();
@@ -127,34 +161,16 @@ namespace CapaPresentacion
                     txtPrecio.Hide();
                     txtVolumen.Hide();
                     btnGuardar.Hide();
+                    btnVolverInsertar.Hide();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error en uno de los datos ingresados. " + ex.Message + " Intente nuevamente. \n\n");
                     limpiarForm();
                     btnInsertarLata.PerformClick();
-                }
-            }
-            else if (exp1.Latas.Count() >= 7)
-            {
-                CapacidadInsuficienteException ex = new CapacidadInsuficienteException(string.Format("La {0} se encuentra llena", exp1.Nombre));
-                MessageBox.Show((string.Format("La {0} se encuentra llena", exp1.Nombre)));
-                throw ex;
-            }
+                }            
         }
-        private void limpiarForm()
-        {
-            txtCodigo.Clear();
-            txtPrecio.Clear();
-            txtVolumen.Clear();
-            txtDinero.Clear();
-        }
-        private void CargarListaLatas(List<Lata> latas)
-        {
-            listLatas.DataSource = null;
-            listLatas.DataSource = latas;
-            
-        }
+        
         private void btnVerStock_Click(object sender, EventArgs e)
         {
             if (exp1.EstaVacia())
@@ -164,6 +180,7 @@ namespace CapaPresentacion
                 btnInsertarLata.Enabled = false;
                 btnVerStock.Enabled = false;
                 btnVerBalance.Enabled = false;
+                btnApagar.Enabled = false;
                 btnVolver.Show();
                 string count = exp1.ContarLatas(exp1);
                 lblCuentaLatas.Show();
@@ -175,8 +192,7 @@ namespace CapaPresentacion
             else if (!exp1.EstaVacia())
             {
                 SinStockException ex = new SinStockException(string.Format("La {0} no tiene stock.", exp1.Nombre));
-                MessageBox.Show(string.Format(string.Format("La {0} no tiene stock.", exp1.Nombre)));
-                throw ex;
+                MessageBox.Show(ex.Message);                
             }
         }
 
@@ -187,6 +203,7 @@ namespace CapaPresentacion
             btnInsertarLata.Enabled = true;
             btnVerStock.Enabled = true;
             btnVerBalance.Enabled = true;
+            btnApagar.Enabled = true;
             btnVolver.Hide();
             listLatas.Hide();
             lblCuentaLatas.Hide();
@@ -200,6 +217,7 @@ namespace CapaPresentacion
             btnInsertarLata.Enabled = false;
             btnVerStock.Enabled = false;
             btnVerBalance.Enabled = false;
+            btnApagar.Enabled = false;
             btnVolver.Show();
             string count = exp1.ContarLatas(exp1);
             int capacidadRestante = exp1.GetCapacidadRestante();
@@ -217,6 +235,8 @@ namespace CapaPresentacion
                 btnInsertarLata.Enabled = false;
                 btnVerStock.Enabled = false;
                 btnVerBalance.Enabled = false;
+                btnApagar.Enabled = false;
+                btnVolverExtraer.Show();
                 lblListadoLatas.Show();
                 lblCodigo.Show();              
                 txtCodigo.Show();
@@ -246,12 +266,14 @@ namespace CapaPresentacion
                 btnInsertarLata.Enabled = true;
                 btnVerStock.Enabled = true;
                 btnVerBalance.Enabled = true;
+                btnApagar.Enabled = true;
                 lblListadoLatas.Hide();
                 lblCodigo.Hide();               
                 txtCodigo.Hide();               
                 btnRetirar.Hide();
                 lblDinero.Hide();
                 txtDinero.Hide();
+                btnVolverExtraer.Hide();
             }
             catch (Exception ex)
             {
@@ -259,5 +281,76 @@ namespace CapaPresentacion
                 MessageBox.Show("Intente nuevamente." + ex.Message);                
             }
         }
+
+        private void btnVolverInsertar_Click(object sender, EventArgs e)
+        {
+            limpiarForm();
+            btnListadoLatas.Enabled = true;
+            btnExtraerLata.Enabled = true;
+            btnInsertarLata.Enabled = true;
+            btnVerStock.Enabled = true;
+            btnVerBalance.Enabled = true;
+            btnApagar.Enabled = true;
+            lblListadoLatas.Hide();
+            lblCodigo.Hide();
+            lblPrecio.Hide();
+            lblVolumen.Hide();
+            txtCodigo.Hide();
+            txtPrecio.Hide();
+            txtVolumen.Hide();
+            btnGuardar.Hide();
+            btnVolverInsertar.Hide();
+
+        }
+
+        private void btnVolverExtraer_Click(object sender, EventArgs e)
+        {
+            limpiarForm();
+            btnListadoLatas.Enabled = true;
+            btnExtraerLata.Enabled = true;
+            btnInsertarLata.Enabled = true;
+            btnVerStock.Enabled = true;
+            btnVerBalance.Enabled = true;
+            btnApagar.Enabled = true;
+            lblListadoLatas.Hide();
+            lblCodigo.Hide();
+            txtCodigo.Hide();
+            btnRetirar.Hide();
+            lblDinero.Hide();
+            txtDinero.Hide();
+            btnVolverExtraer.Hide();
+        }
+
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            btnListadoLatas.Hide();
+            btnInsertarLata.Hide();
+            btnExtraerLata.Hide();
+            btnVerStock.Hide();
+            btnVerBalance.Hide();
+            pictureBox1.Hide();
+            lblCodigo.Hide();
+            lblPrecio.Hide();
+            lblVolumen.Hide();
+            txtCodigo.Hide();
+            txtPrecio.Hide();
+            txtVolumen.Hide();
+            lblListadoLatas.Hide();
+            btnGuardar.Hide();
+            btnRetirar.Hide();
+            listLatas.Hide();
+            btnVolver.Hide();
+            lblCuentaLatas.Hide();
+            lblBalance.Hide();
+            lblDinero.Hide();
+            txtDinero.Hide();
+            btnVolverExtraer.Hide();
+            btnVolverInsertar.Hide();
+            btnApagar.Hide();
+            lblEncender.Show();
+            btnSi.Show();
+            btnNo.Show();
+        }
+#endregion
     }
 }

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solucion.LibreriaNegocio", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solucion.LibreriaConsola", "..\EjercicioIntegrador1-master\Solucion.LibreriaConsola\Solucion.LibreriaConsola.csproj", "{E081BAE3-1BA9-45D9-B236-C7CB1AE1E945}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.csproj", "{83E7BAF9-15FE-462C-9A72-F85E396ADD39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solucion.Forms", "CapaPresentacion\Solucion.Forms.csproj", "{83E7BAF9-15FE-462C-9A72-F85E396ADD39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

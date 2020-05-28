@@ -53,6 +53,9 @@
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblDinero = new System.Windows.Forms.Label();
             this.txtDinero = new System.Windows.Forms.TextBox();
+            this.btnVolverInsertar = new System.Windows.Forms.Button();
+            this.btnVolverExtraer = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +141,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(161, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -166,11 +169,11 @@
             // lblVolumen
             // 
             this.lblVolumen.AutoSize = true;
-            this.lblVolumen.Location = new System.Drawing.Point(223, 204);
+            this.lblVolumen.Location = new System.Drawing.Point(212, 204);
             this.lblVolumen.Name = "lblVolumen";
-            this.lblVolumen.Size = new System.Drawing.Size(47, 13);
+            this.lblVolumen.Size = new System.Drawing.Size(70, 13);
             this.lblVolumen.TabIndex = 11;
-            this.lblVolumen.Text = "volumen";
+            this.lblVolumen.Text = "volumen (mL)";
             // 
             // txtCodigo
             // 
@@ -274,11 +277,44 @@
             this.txtDinero.Size = new System.Drawing.Size(100, 20);
             this.txtDinero.TabIndex = 24;
             // 
+            // btnVolverInsertar
+            // 
+            this.btnVolverInsertar.Location = new System.Drawing.Point(15, 330);
+            this.btnVolverInsertar.Name = "btnVolverInsertar";
+            this.btnVolverInsertar.Size = new System.Drawing.Size(158, 36);
+            this.btnVolverInsertar.TabIndex = 25;
+            this.btnVolverInsertar.Text = "Volver";
+            this.btnVolverInsertar.UseVisualStyleBackColor = true;
+            this.btnVolverInsertar.Click += new System.EventHandler(this.btnVolverInsertar_Click);
+            // 
+            // btnVolverExtraer
+            // 
+            this.btnVolverExtraer.Location = new System.Drawing.Point(226, 330);
+            this.btnVolverExtraer.Name = "btnVolverExtraer";
+            this.btnVolverExtraer.Size = new System.Drawing.Size(158, 36);
+            this.btnVolverExtraer.TabIndex = 26;
+            this.btnVolverExtraer.Text = "Volver";
+            this.btnVolverExtraer.UseVisualStyleBackColor = true;
+            this.btnVolverExtraer.Click += new System.EventHandler(this.btnVolverExtraer_Click);
+            // 
+            // btnApagar
+            // 
+            this.btnApagar.Location = new System.Drawing.Point(15, 400);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(158, 38);
+            this.btnApagar.TabIndex = 27;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
             // FormExpendedora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnApagar);
+            this.Controls.Add(this.btnVolverExtraer);
+            this.Controls.Add(this.btnVolverInsertar);
             this.Controls.Add(this.txtDinero);
             this.Controls.Add(this.lblDinero);
             this.Controls.Add(this.lblBalance);
@@ -304,7 +340,7 @@
             this.Controls.Add(this.btnSi);
             this.Controls.Add(this.lblEncender);
             this.Name = "FormExpendedora";
-            this.Text = "Expendedora CAI";
+            this.Text = "   ";
             this.Load += new System.EventHandler(this.FormExpendedora_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -338,6 +374,9 @@
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label lblDinero;
         private System.Windows.Forms.TextBox txtDinero;
+        private System.Windows.Forms.Button btnVolverInsertar;
+        private System.Windows.Forms.Button btnVolverExtraer;
+        private System.Windows.Forms.Button btnApagar;
     }
 }
 
