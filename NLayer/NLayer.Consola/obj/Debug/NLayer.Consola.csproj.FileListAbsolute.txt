@@ -1,0 +1,16 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\NLayer.Consola.exe.config
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\NLayer.Consola.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\NLayer.Consola.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\NLayer.Entidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\NLayer.Negocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\NLayer.Datos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\NLayer.Entidades.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\NLayer.Negocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\NLayer.Datos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\obj\Debug\NLayer.Consola.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\obj\Debug\NLayer.Consola.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\obj\Debug\NLayer.Consola.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\obj\Debug\NLayer.Consola.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Consola\obj\Debug\NLayer.Consola.pdb

@@ -1,0 +1,11 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\bin\Debug\NLayer.Datos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\bin\Debug\NLayer.Datos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\bin\Debug\NLayer.Entidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\bin\Debug\NLayer.Entidades.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\obj\Debug\NLayer.Datos.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\obj\Debug\NLayer.Datos.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\obj\Debug\NLayer.Datos.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\obj\Debug\NLayer.Datos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\NLayer\NLayer.Datos\obj\Debug\NLayer.Datos.pdb

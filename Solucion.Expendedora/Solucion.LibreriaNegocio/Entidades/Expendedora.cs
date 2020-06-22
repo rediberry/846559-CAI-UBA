@@ -37,7 +37,7 @@ namespace Solucion.LibreriaNegocio
         {
             this._nombre = nombre;
             this._latas = new List<Lata>();
-            Lata a1 = new Lata("CO1", "Coca Cola", "Regular", 30, 350);
+            /*Lata a1 = new Lata("CO1", "Coca Cola", "Regular", 30, 350);
             Lata a2 = new Lata("CO2", "Coca Cola", "Zero", 35, 350);
             Lata a3 = new Lata("SP1", "Sprite", "Regular", 30, 350);
             Lata a4 = new Lata("SP2", "Sprite", "Zero", 35, 350);
@@ -48,7 +48,7 @@ namespace Solucion.LibreriaNegocio
             this._latas.Add(a3);
             this._latas.Add(a4);
             this._latas.Add(a5);
-            this._latas.Add(a6);
+            this._latas.Add(a6);*/
         }
 
         public void AgregarLata(Lata lata)//recibe un objeto tipo lata y valida que el codigo sea correcto
