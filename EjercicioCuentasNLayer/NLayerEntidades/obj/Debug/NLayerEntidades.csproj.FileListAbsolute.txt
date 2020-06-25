@@ -1,0 +1,2 @@
+C:\Users\146109\source\repos\EjercicioCuentasNLayer\NLayerEntidades\obj\Debug\NLayerEntidades.csprojAssemblyReference.cache
+C:\Users\146109\source\repos\EjercicioCuentasNLayer\NLayerEntidades\obj\Debug\NLayerEntidades.csproj.CoreCompileInputs.cache

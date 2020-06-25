@@ -1,0 +1,1 @@
+C:\Users\146109\source\repos\EjercicioCuentasNLayer\NLayerNegocio\obj\Debug\NLayerNegocio.csproj.CoreCompileInputs.cache
