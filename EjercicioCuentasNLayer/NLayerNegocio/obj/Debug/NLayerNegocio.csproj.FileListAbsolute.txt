@@ -1,1 +1,14 @@
 C:\Users\146109\source\repos\EjercicioCuentasNLayer\NLayerNegocio\obj\Debug\NLayerNegocio.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\bin\Debug\NLayerNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\bin\Debug\NLayerNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\bin\Debug\NLayerDatos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\bin\Debug\NLayerEntidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\bin\Debug\NLayerDatos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\bin\Debug\NLayerEntidades.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\obj\Debug\NLayerNegocio.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\obj\Debug\NLayerNegocio.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\obj\Debug\NLayerNegocio.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\obj\Debug\NLayerNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerNegocio\obj\Debug\NLayerNegocio.pdb

@@ -1,0 +1,69 @@
+Documentacion y pruebas de api https://cai-api.azurewebsites.net/swagger/index.html
+
+********* CONSIGNAS **************
+1) Arquitectura en capas con responsabilidades delimitadas de cada capa
+2) Validación de inputs
+3) Serialización
+4) interfaz de usuario en forms
+5) Utilizar los conceptos vistos en POO
+6) Desarrollar los algoritmos requeridos
+
+Enunciado
+Se requiere: 
+a. Mostrar en pantalla los diferentes tipos de prestamos obtenidos del servicio "LineasPrestamo" (get).
+b. Habilitar al usuario la posibilidad de seleccionar una linea de prestamo de las obtenidas en el punto a. (validación)
+c. Habilitar al usuario campos de monto y plazo de una linea seleccionada. 
+d. Mediante el botón simular se toman los inputs de usuario y se calculan las cuotas con las formulas dadas en el diseño de la entidad.
+e. Mediante el botón Alta se deberá tomar los campos necesarios para poder hacer el alta del prestamo con el servicio "Prestamo" (post)
+f. Durante la primer carga del formulario y en cada Alta de prestamo, se deberá recargar la lista lstPrestamos con lo obtenido en el servicio "Prestamo" (get)
+g. Cada vez que se cargue lstPrestamos se deberá calcular la comisión (ver entidad operador)
+
+*  Los campos grisados son los que el usuairo NO puede editar.
+** Se valorará el uso de archivo de configuración para los valores estáticos (url, registro de alumno, etc)
+
+********* DATOS **************
+
+*Imagen de la interfaz incluida, no es necesario respetar 100%*
+
+*Servicios*
+
+- LineasPrestamo 
+ - Get: Linea - TNA => List<TipoPrestamo> (?https://cai-api.azurewebsites.net/api?/v1?/prestamotipo)
+
+- Prestamo 
+ - Get: Usuario => List<Prestamo> (?https://cai-api.azurewebsites.net/api?/v1?/prestamo/{registro})
+ - Post: Linea - Plazo - Monto - CuotaTotal => ResultadoTransaccion (?https://cai-api.azurewebsites.net/api?/v1?/prestamo/)
+
+
+
+*Entidades*
+
+- Operador
+ + Prestamos : List<Prestamo>
+ + Comsión : double
+ + PorcentajeComision : double (15% del interés total de cada préstamo)
+
+- ResultadoTransaccion
+ + isOk : bool
+ + error : string
+ + id : int
+
+- TipoPrestamo
+  + Linea  : string
+  + TNA  : double 
+
+- Prestamo  (en vez de linea y tna, podria ser prop TipoPrestamo pero no los quiero romper con agregacion en WS)
+ + Linea  : string
+ + TNA  : double
+ + Plazo  : int
+ + Monto  : double
+ + Usuario : string
+ + id : int
+** Propiedades Calculables en entidad Prestamo ***
+ + CuotaCapital > (Monto/Plazo) 
+ + CuotaInteres > CuotaCapital * (TNA/12/100)
+ + Cuota CuotaCapital + CuoTaInteres
+
+
+
+

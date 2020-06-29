@@ -22,6 +22,7 @@ namespace NLayerEntidades
             [DataMember(Name = "apellido")]
             public string Ape { get => _apellido; set => _apellido = value; }
 
+            [DataMember] 
             public int id { get => _id; set => _id = value; }
 
             public string Direccion { get => _direccion; set => _direccion = value; }

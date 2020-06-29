@@ -16,16 +16,16 @@ namespace NLayerConsola
             {
                 CuentaServicio servicio = new CuentaServicio();
 
-                Cuenta c = servicio.AbrirCuenta("Caja ahorro", 17);
+                Cuenta c = servicio.AbrirCuenta("Caja ahorro en Bitcoins", 60);
 
                 Console.WriteLine("Alta cuenta " + c);
 
                 // try catch acá - no tiene feedback
-                servicio.ModificarSaldo(c.id, 390);
+                servicio.ModificarSaldo(c.id, 200);
 
                 Console.WriteLine("Saldo Modificado");
 
-                c = servicio.Traer(17);
+                c = servicio.Traer(60);
 
                 Console.WriteLine("Nuevo estado cuenta: " + c);
 

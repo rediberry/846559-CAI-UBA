@@ -1,0 +1,19 @@
+********* RESOLUCION **************
+Entidades
+ - enunciadas
+
+Mappers
+ - PrestamoMapper -> map get (con parametro de legajo) y map post
+ - TipoPrestamoMapper -> solo mappear el get
+
+Servicios
+ - TipoPrestamoService -> 1 metodo basico, Traer devuelve lo mismo que el mapper > List<TipoPrestamos>
+ - PrestamoService -> 2 metodos basicos, AltaPrestamo: recibe los parametros que pide el post arma y devuelve resultadotransaccion. TraerPrestamosOperador: recibe usuario, devuelve un Objeto Operador con la lista de prestamos que trae del mapper(get) como propiedad y la propiedad comision que se auto calcula.
+mútodo de calculos. Simular(tna, monto, plazo, linea, usuario) solo llena y devuelve obj Prestamo. Tambien se puede hacer con el constructor del obj Prestamo
+
+Interfaz
+ - metodo Cargar > Carga lista Prestamos y textbox de comision (usa TraerPrestamosOperador)
+ - onLoad > Cargalista tipos (usa Traer), Cargar (metodo anterior)
+ - lstTipoChange > con el obj tipo prestamo seleccionado carga los textbox linea y tna.
+ - con el boton simular > si tiene completo los campos monto y plazo usa el metodo simular y con el obj que devuelve setea el textbox de las cuotas usando las properties calculables de ese obj.
+ - botn Alta > valida que este todo bien y llama al metodo AltaPrestamo

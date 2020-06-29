@@ -1,1 +1,17 @@
 C:\Users\146109\source\repos\EjercicioCuentasNLayer\NLayerConsola\obj\Debug\NLayerConsola.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\NLayerConsola.exe.config
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\NLayerConsola.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\NLayerConsola.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\NLayerEntidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\NLayerNegocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\NLayerDatos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\NLayerEntidades.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\NLayerNegocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\NLayerDatos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\obj\Debug\NLayerConsola.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\obj\Debug\NLayerConsola.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\obj\Debug\NLayerConsola.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\obj\Debug\NLayerConsola.exe
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerConsola\obj\Debug\NLayerConsola.pdb

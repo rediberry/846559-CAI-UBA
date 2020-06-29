@@ -45,7 +45,7 @@ namespace NLayerNegocio
 
             foreach (Cliente c in lst)
             {
-                if (c.id == c.id)
+                if (idCliente == c.id)
                     return true;
             }
 

@@ -1,2 +1,8 @@
 C:\Users\146109\source\repos\EjercicioCuentasNLayer\NLayerEntidades\obj\Debug\NLayerEntidades.csprojAssemblyReference.cache
 C:\Users\146109\source\repos\EjercicioCuentasNLayer\NLayerEntidades\obj\Debug\NLayerEntidades.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerEntidades\bin\Debug\NLayerEntidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerEntidades\bin\Debug\NLayerEntidades.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerEntidades\obj\Debug\NLayerEntidades.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerEntidades\obj\Debug\NLayerEntidades.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerEntidades\obj\Debug\NLayerEntidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioCuentasNLayer\NLayerEntidades\obj\Debug\NLayerEntidades.pdb
