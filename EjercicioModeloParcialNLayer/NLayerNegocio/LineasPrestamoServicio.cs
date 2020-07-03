@@ -16,7 +16,7 @@ namespace NLayerNegocio
         {
             mapper = new LineasPrestamoMapper();
         }
-        public List<TipoPrestamo> TraerClientes()
+        public List<TipoPrestamo> TraerTipoPrestamo()
         {
             List<TipoPrestamo> result = mapper.TraerTodos();
             return result;

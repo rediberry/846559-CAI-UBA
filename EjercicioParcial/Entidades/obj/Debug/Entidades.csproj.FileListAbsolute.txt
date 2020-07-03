@@ -1,0 +1,6 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Entidades\bin\Debug\Entidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Entidades\bin\Debug\Entidades.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Entidades\obj\Debug\Entidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Entidades\obj\Debug\Entidades.pdb

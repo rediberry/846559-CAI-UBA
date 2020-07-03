@@ -22,9 +22,29 @@ namespace NLayerEntidades
         public string Usuario { get; set; }
         [DataMember]
         public int id { get; set; }
-
-        //public double CuotaCapital = (Monto / Plazo);
-        //public double CuotaInteres = CuotaCapital * (TNA / 12 / 100);
-        //public double Cuota = CuotaCapital + CuotaInteres;
+        [DataMember]
+        public double CuotaCapital
+        {
+            get
+            {
+                return Monto / Plazo;
+            }
+        }
+        [DataMember]
+        public double CuotaInteres
+        {
+            get
+            {
+                return CuotaCapital * (TNA / 12 / 100);
+            }
+        }
+        [DataMember]
+        public double Cuota
+        {
+            get
+            {
+                return CuotaCapital + CuotaInteres;
+            }
+        }
     }
 }

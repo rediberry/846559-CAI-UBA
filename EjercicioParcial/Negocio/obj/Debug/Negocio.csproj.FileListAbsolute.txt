@@ -1,0 +1,13 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\bin\Debug\Negocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\bin\Debug\Negocio.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\bin\Debug\Datos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\bin\Debug\Entidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\bin\Debug\Datos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\bin\Debug\Entidades.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\obj\Debug\Negocio.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioParcial\Negocio\obj\Debug\Negocio.pdb

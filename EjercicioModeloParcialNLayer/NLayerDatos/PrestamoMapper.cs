@@ -12,9 +12,9 @@ namespace NLayerDatos
 {
     public class PrestamoMapper
     {
-        public List<Prestamo> Traer(int idCliente)
+        public List<Prestamo> Traer()
         {
-            string json3 = WebHelper.Get("/api/v1/prestamo/" + idCliente.ToString());
+            string json3 = WebHelper.Get("/api/v1/prestamo/" + ConfigurationManager.AppSettings["Legajo"]);
             List<Prestamo> resultado = MapList(json3);
             return resultado;
         }
@@ -36,7 +36,7 @@ namespace NLayerDatos
             n.Add("Linea", prestamo.Linea);
             n.Add("Plazo", prestamo.Plazo.ToString());
             n.Add("Monto", prestamo.Monto.ToString());
-            //n.Add("CuotaTotal", prestamo.CuotaTotal.ToString());
+            n.Add("CuotaTotal", prestamo.Cuota.ToString());
             return n;
         }
         private ResultadoTransaccion MapResultado(string json)

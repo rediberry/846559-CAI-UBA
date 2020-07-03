@@ -13,8 +13,25 @@ namespace NLayerEntidades
         [DataMember]
         public List<Prestamo> Prestamos { get; set; }
         [DataMember]
-        public double Comision { get; set; }
+        public double Comision
+        {
+            get
+            {
+                double c = 0;
+                foreach (Prestamo p in Prestamos)
+                {
+                    c = c + PorcentajeComision * (p.Monto * p.Plazo * (p.TNA/12) );
+                }
+                return c;
+            }
+        }
         [DataMember]
-        public double PorcentajeComision { get; set; }
+        public double PorcentajeComision { get; set; } = 0.15;
+
+        public Operador(List<Prestamo> prestamosDelOperador)
+        {
+            this.Prestamos = prestamosDelOperador;
+            this.PorcentajeComision = 0.15;
+        }
     }
 }

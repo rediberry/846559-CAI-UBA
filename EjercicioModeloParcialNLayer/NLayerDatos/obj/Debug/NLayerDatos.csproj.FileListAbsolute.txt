@@ -1,0 +1,11 @@
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\bin\Debug\NLayerDatos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\bin\Debug\NLayerDatos.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\bin\Debug\NLayerEntidades.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\bin\Debug\NLayerEntidades.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\obj\Debug\NLayerDatos.csprojAssemblyReference.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\obj\Debug\NLayerDatos.csproj.CoreCompileInputs.cache
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\obj\Debug\NLayerDatos.csproj.CopyComplete
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\obj\Debug\NLayerDatos.dll
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\EjercicioModeloParcialNLayer\NLayerDatos\obj\Debug\NLayerDatos.pdb
