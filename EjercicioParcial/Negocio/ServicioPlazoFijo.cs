@@ -37,6 +37,16 @@ namespace Negocio
             }
             return montototal;
         }
-
+        public double ObtenerMontoFinal(double tasa, double capitalinicial, int dias)
+        {
+            double interes = (((tasa / 365 * dias) * capitalinicial) / 100);
+            double montofinal = capitalinicial + interes;
+            return montofinal;
+        }
+        public double ObtenerInteresARecibir(double tasa, double capitalinicial, int dias)
+        {
+            double interes = (((tasa / 365 * dias) * capitalinicial) / 100);
+            return interes;
+        }
     }
 }
