@@ -23,28 +23,23 @@ namespace NLayerEntidades
         [DataMember]
         public int id { get; set; }
         [DataMember]
-        public double CuotaCapital
-        {
-            get
-            {
-                return Monto / Plazo;
-            }
-        }
+        public double CuotaCapital { get; set; }       
+        
         [DataMember]
-        public double CuotaInteres
-        {
-            get
-            {
-                return CuotaCapital * (TNA / 12 / 100);
-            }
-        }
+        public double CuotaInteres { get; set; }  
+        
         [DataMember]
-        public double Cuota
+        public double Cuota { get; set; }
+        
+        public double CalcularInteres()
         {
-            get
-            {
-                return CuotaCapital + CuotaInteres;
-            }
+            double interes = this.CuotaInteres * this.Plazo;
+            return interes;
+        }
+        public override string ToString()
+        {
+            double Interes = this.Monto * (this.TNA / 100 / 12 * this.Plazo);
+            return this.id + ") " + "Capital: $" + this.Monto + " - Plazo: " + this.Plazo + " meses" + " - Tipo: " + this.Linea + " - Interes: $" + Interes.ToString();
         }
     }
 }

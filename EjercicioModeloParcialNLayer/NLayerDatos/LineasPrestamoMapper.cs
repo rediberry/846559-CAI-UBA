@@ -12,7 +12,7 @@ namespace NLayerDatos
     {
         public List<TipoPrestamo> TraerTodos()
         {
-            string json2 = WebHelper.Get("/api/v1/prestamotipo");
+            string json2 = WebHelper.Get("api/v1/prestamotipo");
             List<TipoPrestamo> resultado = MapList(json2);
             return resultado;
         }

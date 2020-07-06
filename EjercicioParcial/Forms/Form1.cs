@@ -19,7 +19,7 @@ namespace Forms
         private ServicioPlazoFijo _spf;
         public Form1(ServicioPlazoFijo spf)
         {
-            this._spf = new ServicioPlazoFijo();
+            this._spf = spf;
             InitializeComponent();
         }
         #region Metodos

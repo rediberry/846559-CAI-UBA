@@ -20,7 +20,7 @@ namespace NLayerEntidades
                 double c = 0;
                 foreach (Prestamo p in Prestamos)
                 {
-                    c = c + PorcentajeComision * (p.Monto * p.Plazo * (p.TNA/12) );
+                    c += PorcentajeComision * (p.Monto * p.Plazo * (p.TNA/12) );
                 }
                 return c;
             }

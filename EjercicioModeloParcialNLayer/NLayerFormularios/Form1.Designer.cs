@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,14 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lstPrestamos = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,72 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(393, 426);
             this.panel1.TabIndex = 0;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(278, 169);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 17;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(278, 131);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 16;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(278, 91);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 15;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(278, 56);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 14;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(206, 172);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 13);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Plazo (meses)";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(206, 131);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Monto";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(206, 94);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "TNA";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(206, 59);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Linea";
             // 
             // label6
             // 
@@ -141,6 +207,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "ALTA";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -150,6 +217,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Simular";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lstTipoPrestamos
             // 
@@ -158,6 +226,7 @@
             this.lstTipoPrestamos.Name = "lstTipoPrestamos";
             this.lstTipoPrestamos.Size = new System.Drawing.Size(183, 368);
             this.lstTipoPrestamos.TabIndex = 1;
+            this.lstTipoPrestamos.SelectedIndexChanged += new System.EventHandler(this.lstTipoPrestamos_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -177,7 +246,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(411, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(377, 426);
+            this.panel2.Size = new System.Drawing.Size(453, 426);
             this.panel2.TabIndex = 1;
             // 
             // textBox1
@@ -203,7 +272,7 @@
             this.lstPrestamos.FormattingEnabled = true;
             this.lstPrestamos.Location = new System.Drawing.Point(8, 40);
             this.lstPrestamos.Name = "lstPrestamos";
-            this.lstPrestamos.Size = new System.Drawing.Size(358, 264);
+            this.lstPrestamos.Size = new System.Drawing.Size(442, 264);
             this.lstPrestamos.TabIndex = 2;
             // 
             // label2
@@ -216,81 +285,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "PRESTAMOS DADOS DE ALTA";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(206, 59);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Linea";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(206, 94);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "TNA";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(206, 131);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Monto";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(206, 172);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Plazo";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(278, 56);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 14;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(278, 91);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 15;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(278, 131);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 16;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(278, 169);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 17;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(876, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
