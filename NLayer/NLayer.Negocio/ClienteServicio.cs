@@ -21,6 +21,11 @@ namespace NLayer.Negocio
             List<Cliente> result = mapper.TraerTodos();
             return result;
         }
+        public List<Cliente> TraerRegistro()
+        {
+            List<Cliente> result = mapper.TraerRegistro();
+            return result;
+        }
 
         public int InsertarCliente(string nombre, string apellido, string direccion)
         {
