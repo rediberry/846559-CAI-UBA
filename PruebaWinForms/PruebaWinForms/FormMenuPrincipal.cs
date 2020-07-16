@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -80,12 +81,25 @@ namespace PruebaWinForms
                 panelFormularios.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
             }
             //si el formulario/instancia existe
             else
             {
                 formulario.BringToFront();
-            }
+            }            
+        }
+        //----------------METODO CAMBIAR COLOR DE BOTON AL CERRAR FORM
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["Form1"] == null)
+                button1.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["Form2"] == null)
+                button2.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["Form3"] == null)
+                button3.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["Form4"] == null)
+                button4.BackColor = Color.FromArgb(4, 41, 68);
         }
         #endregion
 
@@ -119,6 +133,26 @@ namespace PruebaWinForms
             this.Size = new Size(sw, sh);
             this.Location = new Point(lx, ly);
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.AbrirFormulario<Form1>();
+            button1.BackColor = Color.FromArgb(12,61,92);
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.AbrirFormulario<Form2>();
+            button2.BackColor = Color.FromArgb(12, 61, 92);
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.AbrirFormulario<Form3>();
+            button3.BackColor = Color.FromArgb(12, 61, 92);
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.AbrirFormulario<Form4>();
+            button4.BackColor = Color.FromArgb(12, 61, 92);
+        }
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -127,15 +161,7 @@ namespace PruebaWinForms
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        /*private void button1_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Form1>();
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Form2>();
-        }*/
+        }        
         #endregion
     }
 }

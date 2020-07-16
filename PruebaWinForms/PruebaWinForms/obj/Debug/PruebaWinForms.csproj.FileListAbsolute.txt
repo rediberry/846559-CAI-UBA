@@ -8,3 +8,7 @@ C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\PruebaWinForms\PruebaWinForm
 C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\PruebaWinForms\PruebaWinForms\obj\Debug\PruebaWinForms.csproj.CoreCompileInputs.cache
 C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\PruebaWinForms\PruebaWinForms\obj\Debug\PruebaWinForms.exe
 C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\PruebaWinForms\PruebaWinForms\obj\Debug\PruebaWinForms.pdb
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\PruebaWinForms\PruebaWinForms\obj\Debug\PruebaWinForms.Form1.resources
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\PruebaWinForms\PruebaWinForms\obj\Debug\PruebaWinForms.Form2.resources
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\PruebaWinForms\PruebaWinForms\obj\Debug\PruebaWinForms.Form3.resources
+C:\Users\ERIC BERRY\Documents\GitHub\846559-CAI-UBA\PruebaWinForms\PruebaWinForms\obj\Debug\PruebaWinForms.Form4.resources
